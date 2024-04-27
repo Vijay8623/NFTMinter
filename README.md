@@ -69,7 +69,7 @@ This project demonstrates a simple, fast, and decentralized way to create NFTs o
 5. Your NFT will be minted and stored on-chain!
 
 ---
-
+https://www.loom.com/share/dc5031794fcc4ad1b5633fcabfe69c94?sid=c52146b3-4f17-4191-b874-2654ff203794
 ## Why Westend?
 
 Westend is the official test network for Polkadot.  
