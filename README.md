@@ -1,1 +1,1 @@
-# Stakehabit1
+# nftminer
