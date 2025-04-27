@@ -1,81 +1,135 @@
 
-
 # NFTMinter
 
-Mint your own NFTs on the **Westend Asset Hub** (Polkadot test network)!  
-This project was created during our **first Web3 hackathon** — we're excited to share it!
+**Mint NFTs on Polkadot’s Westend Asset Hub with a simple UI and low fees.**
+[Demo Video (with audio) – Loom](https://www.loom.com/share/dc5031794fcc4ad1b5633fcabfe69c94?sid=c52146b3-4f17-4191-b874-2654ff203794)
 
 ---
 
-## Overview
+## 🌐 Summary
 
-**NFTMinter** allows users to easily mint non-fungible tokens (NFTs) using the Westend Asset Hub, a parachain on the Polkadot network.  
-This project demonstrates a simple, fast, and decentralized way to create NFTs on Polkadot's substrate-based blockchain.
-
----
-
-## Features
-
-- Mint NFTs directly onto Westend Asset Hub
-- Connect with Polkadot.js Wallet
-- Simple and intuitive user interface
-- Fast and low-fee transactions
-- Built entirely for Web3 hackathon innovation
+**NFTMinter** lets users mint NFTs on Polkadot's Westend Asset Hub using a simple web interface integrated with Polkadot.js. Fast, low-cost, and interoperable NFTs.
 
 ---
 
-## Technology Stack
+## 🧩 Full Description
 
-- **Blockchain**: Polkadot - Westend Asset Hub
-- **Frontend**: HTML, JavaScript
-- **Wallet Integration**: Polkadot.js API and Extension
-- **Network**: Westend (Polkadot Testnet)
+NFTMinter solves a common challenge in the Web3 space: how to easily mint NFTs on a scalable, interoperable blockchain without incurring high gas fees. Built during our first Web3 hackathon, NFTMinter leverages Polkadot's **Westend Asset Hub** — a testnet version of the production-grade Asset Hub parachain — to provide a developer- and user-friendly minting experience. The project is designed for creators, developers, and hobbyists to experiment with NFT creation in a low-risk, cost-efficient environment.
 
----
-
-## Getting Started
-
-### Prerequisites
-
-- [Node.js and npm](https://nodejs.org/)
-- [Polkadot.js Extension](https://polkadot.js.org/extension/)
-- Some Westend (WND) testnet tokens (available from faucet)
-
-### Installation
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/your-username/NFTMinter.git
-   cd NFTMinter
-   ```
-
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-3. **Run locally**:
-   - Open `index.html` in your browser.
-   - Make sure your wallet is connected to the **Westend** network.
+By using Polkadot’s Substrate-based architecture and Ethereum-compatible parachains (like Moonbeam), NFTMinter benefits from cross-chain operability, shared security, and Polkadot's powerful on-chain governance model. Users interact with the platform using the Polkadot.js browser extension, ensuring secure and seamless wallet connectivity.
 
 ---
 
-## Usage
+## ⚙️ Technical Description
 
-1. Connect your wallet using Polkadot.js.
-2. Fill out NFT details (name, description, metadata link).
-3. Click **Mint NFT**.
-4. Confirm the transaction in your wallet.
-5. Your NFT will be minted and stored on-chain!
+### ✨ Key Technologies Used
+
+* **Blockchain**: Polkadot (Westend Asset Hub, Moonbeam)
+* **Smart Contract Language**: Solidity (compiled for Ethereum-compatible Moonbeam parachain)
+* **Smart Contract**:
+  * `NFTMinter.sol` – Custom ERC-721 NFT minting contract with URI metadata
+
+* **Frontend**: HTML, JavaScript
+* **Wallet Integration**: Polkadot.js API and Extension
+* **Other Tools**: OpenZeppelin (ERC-721), Subscan Explorer, Loom for video
+
+### 📌 Unique Polkadot Features Used
+
+* **Westend Asset Hub** for safe, low-fee testing and development
+* **Ethereum Compatibility** via Moonbeam for deploying Solidity contracts
+* **XCM (Cross-Consensus Messaging)** for future NFT interoperability across chains
+* **Polkadot.js Extension** for secure wallet integration and network switching
 
 ---
-https://www.loom.com/share/dc5031794fcc4ad1b5633fcabfe69c94?sid=c52146b3-4f17-4191-b874-2654ff203794
-## Why Westend?
 
-Westend is the official test network for Polkadot.  
-It offers a safe environment to experiment with low-cost transactions, making it ideal for development and hackathons.
+## 🧠 How the Smart Contracts Work
+
+### `NFTMinter.sol`
+
+* Inherits from `ERC721URIStorage` (OpenZeppelin)
+* Mints NFTs with unique URIs on demand
+* Written in Solidity and deployed to an Ethereum-compatible parachain (Moonbeam)
+* Can be extended for advanced features like royalties, batch minting, etc.
+
+## 🔗 Deployed Contracts
+
+* **NFT Contract on Moonbase (EVM compatible)**:
+  [https://moonbase.subscan.io/account/0x92fd6660B83F6a37A782A24385A9db5460c1D749]
+  (https://moonbase.subscan.io/account/0x92fd6660B83F6a37A782A24385A9db5460c1D749)
+* **Asset Hub Address (for XCM / Interoperability preview)**:
+  [https://assethub-westend.subscan.io/account/0xF0Df800AB534A364414595D5F8aA1D6F73acE879]
+  (https://assethub-westend.subscan.io/account/0xF0Df800AB534A364414595D5F8aA1D6F73acE879)
+---
+
+## 🎬 Demo Video
+
+* **Full Video Walkthrough (with audio):**
+  👉 [Loom Video](https://www.loom.com/share/dc5031794fcc4ad1b5633fcabfe69c94?sid=c52146b3-4f17-4191-b874-2654ff203794)
+
+This video includes:
+
+* Live minting demonstration
+* Overview of the user interface
+* How contracts are deployed and interacted with
+* GitHub repo structure
+* Explanation of how it meets hackathon requirements
+
+---
+
+## 📸 Screenshots
+
+**Initial Page**
+![Initial UI](Screenshot0.png)
+
+**After NFT Minting**
+![Post-Mint UI](Screenshot1.png)
+
+---
+
+## 🧑‍💻 Canva Presentation
+
+View the problem statement, solution design, and demo slides here:
+👉 [Canva Slide Deck](http://canva.com/design/DAGl1f_BzdQ/zBtB3EAmwzmGxcG_eiB7SA/edit)
+
+---
+
+## 📁 GitHub Structure
+
+```
+NFTMinter/
+│
+├── contracts/
+│   ├── NFTMinter.sol       # Custom ERC721 minting contract
+│   └── Storage.sol         # Simple stateful contract
+│
+├── index.html              # Frontend UI
+├── /screenshots            # UI screenshots
+├── README.md               # This file
+├── package.json
+└── ...
+```
+
+---
+
+## 🚀 Getting Started
+
+### ✅ Prerequisites
+
+* [Node.js and npm](https://nodejs.org/)
+* [Polkadot.js Extension](https://polkadot.js.org/extension/)
+* Westend (WND) testnet tokens — [Request from Faucet](https://polkadot.js.org/apps/?rpc=wss://westend-rpc.polkadot.io#/accounts)
 
 
-## Authors
 
-- Vijay Chelikani
+
+## 📜 License
+
+This project is **open-source** under the MIT License. All code will remain public.
+
+---
+
+## 👨‍💻 Authors
+
+* Vijay Chelikani
+
+---
